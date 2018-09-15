@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import uploadUse from '@/test/test-upload'
-import devUploadUse from '@/dev/dev-upload'
+import validateTestUse from '@/test/test-validate'
+import validateDevUse from '@/dev/dev-validate'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/test-upload-use',
-      name: 'uploadUse',
-      component: uploadUse
+      path: '/test-validate-use',
+      name: 'validateTestUse',
+      component: validateTestUse
     },
     {
-      path: '/dev-upload-use',
-      name: 'devUploadUse',
-      component: devUploadUse
+      path: '/dev-validate-use',
+      name: 'validateDevUse',
+      component: validateDevUse
     }
   ]
 })

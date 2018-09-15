@@ -1,7 +1,7 @@
 
-import upload from './ajax-upload.vue'
-let ajaxUpload = {}
-ajaxUpload.install = function (Vue, options) {
+import upload from './form-validate.vue'
+let validate = {}
+validate.install = function (Vue, options) {
   Vue.prototype.$msg = 'Hello I am test.js'
   Vue.prototype.$myMethod = function (arr) {
     if (arr.length < 0) {
