@@ -8,6 +8,7 @@
           <span></span>
         </li>
       </ul>
+      <button @click="rollAgain()">点我</button>
     </div>
   </div>
 </template>
@@ -18,7 +19,7 @@
 export default {
   data () {
     return {
-      prizeIndex: 8,
+      prizeIndex: 4,
       currentIndex: 1,
       setIntervalTimer: '',
       baseCircle: 5,
@@ -31,7 +32,7 @@ export default {
   },
   created () {
     this.allcount = this.baseCircle * 9 + this.prizeIndex
-    this.roll()
+    // this.roll()
   },
   methods: {
     addActive (i) {
@@ -77,6 +78,12 @@ export default {
           }
         }
       }, this.timer)
+    },
+    rollAgain () {
+      this.count = 0
+      this.timer = 50
+      this.currentIndex = 0
+      this.roll()
     }
   }
 }
